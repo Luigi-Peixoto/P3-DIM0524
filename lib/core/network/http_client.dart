@@ -31,4 +31,23 @@ class HttpClient {
       throw Exception('Erro na requisição: ${response.statusCode}');
     }
   }
+
+  Future<Map<String, dynamic>> post(
+    String endpoint, {
+    Map<String, dynamic>? body,
+  }) async {
+    final uri = Uri.parse('${AppConfig.baseUrl}$endpoint');
+
+    final response = await http.post(
+      uri,
+      headers: {
+        'Authorization': 'Bearer ${AppConfig.apiKey}',
+        'accept': 'application/json',
+        'content-type': 'application/json',
+      },
+      body: jsonEncode(body ?? {}),
+    );
+
+    return jsonDecode(response.body);
+  }
 }

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:p3_dim0524/modules/home/pages/home_page.dart';
+import 'package:p3_dim0524/modules/splash/pages/splash_page.dart';
 
 import 'core/theme/app_theme.dart';
 
@@ -40,7 +40,7 @@ class MyAppState extends State<MyApp> {
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
       themeMode: _themeMode,
-      home: const HomePage(),
+      home: const SplashPage(),
     );
   }
 }
