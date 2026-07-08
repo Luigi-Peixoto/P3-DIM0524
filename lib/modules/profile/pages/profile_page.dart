@@ -16,7 +16,6 @@ class _ProfilePageState extends State<ProfilePage> {
   final SessionStorage _sessionStorage = SessionStorage();
 
   String? _username;
-  String? _version;
 
   @override
   void initState() {
@@ -31,7 +30,6 @@ class _ProfilePageState extends State<ProfilePage> {
     if (!mounted) return;
     setState(() {
       _username = username;
-      _version = '${packageInfo.version}+${packageInfo.buildNumber}';
     });
   }
 
