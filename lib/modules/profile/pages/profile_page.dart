@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 
 import '../../../core/storage/session_storage.dart';
 import '../../../main.dart';
@@ -25,7 +24,6 @@ class _ProfilePageState extends State<ProfilePage> {
 
   Future<void> _loadData() async {
     final username = await _sessionStorage.getUsername();
-    final packageInfo = await PackageInfo.fromPlatform();
 
     if (!mounted) return;
     setState(() {
