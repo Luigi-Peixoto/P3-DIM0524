@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:p3_dim0524/modules/details/pages/details_page.dart';
+import 'package:p3_dim0524/modules/profile/pages/profile_page.dart';
 
 import '../models/movie.dart';
 import '../models/series.dart';
@@ -112,7 +113,10 @@ class _HomePageState extends State<HomePage> {
           ),
           IconButton(
             icon: const Icon(Icons.person),
-            onPressed: () {}, // navegação para perfil depois
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const ProfilePage()),
+            ),
           ),
         ],
       ),

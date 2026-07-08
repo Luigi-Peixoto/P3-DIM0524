@@ -24,6 +24,8 @@ class MyApp extends StatefulWidget {
 class MyAppState extends State<MyApp> {
   ThemeMode _themeMode = ThemeMode.system;
 
+  ThemeMode get themeMode => _themeMode;
+
   void toggleTheme() {
     setState(() {
       _themeMode = _themeMode == ThemeMode.light
