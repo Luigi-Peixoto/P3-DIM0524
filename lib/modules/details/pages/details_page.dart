@@ -370,7 +370,12 @@ class _DetailPageState extends State<DetailPage> {
               'title': m.title,
               'posterPath': m.posterPath,
               'voteAverage': m.voteAverage,
-              'onTap': null,
+              'onTap': () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => DetailPage(id: m.id, isMovie: true),
+                ),
+              ),
             },
           )
           .toList(),
@@ -389,7 +394,12 @@ class _DetailPageState extends State<DetailPage> {
               'title': s.name,
               'posterPath': s.posterPath,
               'voteAverage': s.voteAverage,
-              'onTap': null,
+              'onTap': () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => DetailPage(id: s.id, isMovie: false),
+                ),
+              ),
             },
           )
           .toList(),

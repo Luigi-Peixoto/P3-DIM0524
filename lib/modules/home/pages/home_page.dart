@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:p3_dim0524/modules/details/pages/details_page.dart';
 import 'package:p3_dim0524/modules/profile/pages/profile_page.dart';
+import 'package:p3_dim0524/modules/search/pages/search_page.dart';
 
 import '../models/movie.dart';
 import '../models/series.dart';
@@ -109,7 +110,10 @@ class _HomePageState extends State<HomePage> {
         actions: [
           IconButton(
             icon: const Icon(Icons.search),
-            onPressed: () {}, // navegação para busca depois
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const SearchPage()),
+            ),
           ),
           IconButton(
             icon: const Icon(Icons.person),
